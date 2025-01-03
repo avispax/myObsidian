@@ -1,8 +1,8 @@
 {
-  "theme": "moonstone",
-  "interfaceFontFamily": "M PLUS 1",
-  "textFontFamily": "M PLUS 1",
-  "monospaceFontFamily": "M PLUS 1 Code",
+  "theme": "system",
+  "interfaceFontFamily": "M PLUS 1 Code,源ノ角ゴシック Code JP",
+  "textFontFamily": "M PLUS 1 Code,源ノ角ゴシック Code JP",
+  "monospaceFontFamily": "M PLUS 1 Code,源ノ角ゴシック Code JP",
   "showViewHeader": false,
   "cssTheme": "Minimal",
   "accentColor": "#0050d1",

@@ -1,0 +1,25 @@
+{
+  "debounceTimeout": 300,
+  "ignoreOpenFiles": false,
+  "ignoreForceViewAll": true,
+  "folders": [
+    {
+      "folder": "00_dataview",
+      "viewMode": "obsidianUIMode: preview"
+    },
+    {
+      "folder": "",
+      "viewMode": ""
+    }
+  ],
+  "files": [
+    {
+      "filePattern": "01_✅Tasks",
+      "viewMode": "obsidianUIMode: preview"
+    },
+    {
+      "filePattern": "",
+      "viewMode": ""
+    }
+  ]
+}

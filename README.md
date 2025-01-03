@@ -1,27 +1,27 @@
-# obsidian-amatzk-template
+# my GTD Obsidian
 
 > [!IMPORTANT]
-> このREADMEは、自分のリポジトリを作成したときに削除してください。
+> 実験中
 
 ## コンセプト
 
-ノートを取ることに集中できる環境。
-認知負荷が低くなるように設計した、シンプルな構成のテンプレートです。
-迷いを生むような、認知負荷を上げる原因となる機能や、視覚的情報をできるだけ削っています。
+昔EvernoteでやってたGTD環境をこれでやれないかなって。
+基本的にはディレクトリ分けでなんとかできそうな気もするんだけども。
+![[gtd.png]]
 
 ## 設計思想
 
 このテンプレートは、以下の設計思想に基づいています。
 
-**ネットワーク構造の情報**
+### 情報をネットワーク構造にする
 - リンクを使って情報をネットワーク構造で繋ぐ
 - Obsidian グラフビュー や Dataview（プラグイン）で、情報の関連性を視覚化および俯瞰する
 
-**検索による情報アクセス**
+### 検索による情報アクセス
 - Obsidianの検索機能やVSCodeの検索機能を使用して、情報を見つける
 - Googleなどの検索エンジンと同じようなアプローチ
 
-**シンプルさの維持**
+### シンプルさの維持
 - シンプルなディレクトリ構造
 	- ディレクトリ構造による分類は、不整合が発生しやすいので避ける
 	- 年単位のディレクトリによるファイリング
@@ -31,7 +31,7 @@
 	- 使用するタグは、日記 #diary とノート #note のみ
 	- 日記やノートの新規作成時、タグの自動付与
 
-**認知負荷の低減**
+### 認知負荷の低減
 - 不要な機能（プラグインや設定）をOFF
 - Minimalテーマなどで視覚情報を削る
 
@@ -194,14 +194,13 @@
 - [Minimal](https://github.com/kepano/obsidian-minimal)
 #### フォント
 
-デフォルトは、中国語フォントになっています。
-自分好みの日本語フォントを設定するとよいでしょう。
 ここでは [M+ FONTS](https://mplusfonts.github.io) を設定しています。
+第２フォントとして 源ノ角ゴシック（Source Han Code JP） にしています。
 
 - インターフェースフォント
-	- M PLUS 1
+	- M PLUS 1 Code
 - テキストフォント
-	- M PLUS 1
+	- M PLUS 1 Code
 - モノスペースフォント
 	- M PLUS 1 Code
 
@@ -297,70 +296,6 @@ Obsidian UI の特定の部分を隠すことができるプラグイン
 	- リーディングビューでプロパティを隠す
 - その他
 	- 自身の好みで設定してください
-
-### [Templater](https://github.com/SilentVoid13/Templater)
-
-Templaterプラグインは、テンプレート言語を定義しています。
-それによって、変数や関数の結果をノートに挿入することができます。
-また、それらの変数や関数を操作するJavaScriptコードを実行することもできます。
-
-デフォルトから変更した設定：
-
-- Template folder location → 00_templates
-	- テンプレートフォルダの場所
-- Trigger Templater on new file creation → ON
-	- 新規ファイル作成でTemplaterをトリガーするか
-
-Template hotkeys
-- 00_templates/[[10_current_time]].md
-	- [[10_current_time]]は、H3で時間を挿入するテンプレート
-	- Hotkey設定：
-		- Templater: Insert 00_templates/10_current_time.md → Alt + ;
-
-Folder templates
-- 02_notes ... 00_templates/[[02_note]].md
-	- 02_notesフォルダ配下に、新規ファイル作成したときに適応するテンプレートの設定
-
-### [Git](https://github.com/Vinzent03/obsidian-git)
-
-Gitで保管庫を管理するプラグイン
-
-方針：
-- mainブランチ1本
-- コミットは手動で行う
-	- Backup で一括操作
-	- Backup = Staging → Commit → Pull → Push
-- プッシュとプルは定期的に自動で行う
-	- リポジトリの競合を可能な限り防ぐ
-- Obsidianの起動時は自動的にプル
-- Obsidianの終了方法はショートカット（Ctrl + Q）を使用
-	- `Git: Create backup and close`
-		- Backup
-		- Obsidianを閉じる
-
-デフォルトから変更した設定：
-
-Automatic：
-- Split automatic commit and push → ON
-	- 自動コミットとプッシュを分割
-- Vault commit interval (minites) → 0 (OFF)
-	- 自動で`git commit`を行う周期
-- Vault push interval (minutes) → 20
-	- 自動で`git push`を行う周期
-- Auto pull interval (minites) → 60
-	- 自動で`git pull`を行う周期
-
-Backup：
-- Pull updates on startup → ON
-	- Obsidian起動時に最新の変更を取得
-- Push on backup → ON
-	- バックアップをプッシュする
-- Pull changes before push → ON
-	- プッシュ前にプルを行う
-
-Hotkey 設定：
-- Git: Create backup and close → Ctrl + Q
-	- バックアップの作成とObsidianの終了
 
 ### [Outliner](https://github.com/vslinko/obsidian-outliner)
 

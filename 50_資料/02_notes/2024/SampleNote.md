@@ -15,4 +15,4 @@ drawioで作成した画像
 ![[sample.svg]]
 
 キャンバス
-[[SampleCanvas.canvas]]
+![[SampleCanvas.canvas]]

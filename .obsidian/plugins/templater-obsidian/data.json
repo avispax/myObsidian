@@ -1,6 +1,6 @@
 {
   "command_timeout": 5,
-  "templates_folder": "00_templates",
+  "templates_folder": "Utility/Templates",
   "templates_pairs": [
     [
       "",
@@ -15,14 +15,21 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "02_notes",
-      "template": "00_templates/02_note.md"
+      "folder": "50_資料/02_notes",
+      "template": "Utility/Templates/02_note.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
     }
   ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": true,
   "enabled_templates_hotkeys": [
-    "00_templates/10_current_time.md"
+    "Utility/Templates/10_current_time.md"
   ],
   "startup_templates": []
 }

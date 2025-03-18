@@ -15,7 +15,7 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "50_資料/02_notes",
+      "folder": "50_資料/01_notes",
       "template": "Utility/Templates/02_note.md"
     }
   ],
@@ -28,8 +28,6 @@
   ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": true,
-  "enabled_templates_hotkeys": [
-    "Utility/Templates/10_current_time.md"
-  ],
+  "enabled_templates_hotkeys": [],
   "startup_templates": []
 }

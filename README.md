@@ -1,7 +1,7 @@
 # my GTD Obsidian
 
 > [!IMPORTANT]
-> 実験中
+> いつでも改造中
 
 ## コンセプト
 
@@ -26,14 +26,32 @@
 	- ディレクトリ構造による分類は、不整合が発生しやすいので避ける
 	- 年単位のディレクトリによるファイリング
 	- 日記やノートの新規作成時、自動でファイル配置
-- 必要最低限のタグ
-	- タグ付けによる分類は、認知負荷が大きいので避ける
-	- 使用するタグは、日記 #diary とノート #note のみ
-	- 日記やノートの新規作成時、タグの自動付与
 
 ### 認知負荷の低減
 - 不要な機能（プラグインや設定）をOFF
-- Minimalテーマなどで視覚情報を削る
+
+## 基本的な使い方（ワイの）
+
+### 始業
+1. 日記を開く
+	1. 適当に今日の予定とかをチェックボックスにして書き出す
+2. [[03_projects]] を開く
+	1. 更新する
+3. [[01_✅Tasks]] と [[02_📝Next Action List]]  を確認する。
+4. 頑張る
+	1. コーディングしたりエンジニアリング作業に没頭する
+
+### 日中
+1. なんかあったら
+	1. [[01_inbox]] にメモっておく。チェックボックス付きで。
+### 終業
+1. 日記を更新する
+2. 03_projects を更新する
+3. GTD的に、inboxとかnext action とか tasks を整理する。
+4. Github に push する。
+
+### 他
+[[01_✅Tasks]] ここでチェックをすると、各markdownに完了日時（チェックした日時）が自動で付与されるから、基本的にはここでチェックの操作するとよいよ。仕組みは知らん。
 
 ## テンプレートの使い方
 
@@ -55,18 +73,18 @@
 
 ## ディレクトリの用途
 
-- 00_template
-	- テンプレート
-- 01_diary
-	- 日記
-- 02_notes
-	- ノート
-- 03_assets
-	- .md と .canvas 以外のファイル置き場
-- 04_canvas
-	- .canvas ファイル置き場
-- 05_dataview
-	- データ一覧表示
+- 00_dataview
+	- あんまり気にしないでよい。
+- 01_inbox
+	- GTDのinbox相当
+- 03_projects
+	- GTDのprojects相当
+- 50_資料
+	- 資料。01からこっちに行ったり、03の途中でこっちに来たり。
+- 99_diary
+	- 日記。
+- Utility
+	- なんかスクリプトとかそういうの。気にしないでよい。
 
 ## 運用ルール（参考）
 
@@ -78,40 +96,30 @@
 	- その日限りの思考や感情
 	- 1つの事柄に対して短い記述（10行以下）
 	- 長くなるなら #note に書く
-- 01_diary/YYYY 配下にファイルを配置（YYYYは年）
-	- 1年で最大365~366ファイルのため、月別でディレクトリを別けない
+- 99_diary/YYYY 配下にファイルを配置（YYYYは年）
+	- めんどいから月別で分けるとかは好きにするよろし
 
 **知識の蓄積**
 - #diary から #note へのリンクを記載し、内容を記述
 - 1つの事柄、1つのノート
-	- Zettelkastenと同様に、1つのノートには1つの概念、アイデア、事柄のみを書く
+	- 1つのノートには1つの概念、アイデア、事柄のみを書く
 - 書くこと：
 	- 論題のタイトルに沿った事柄
 	- 日付に依存しない情報や考え
 	- 抽象的な概念や一般化された知識
 	- 一般的、普遍的な内容
-- 02_notes/YYYY 配下にファイルを配置（YYYYは年）
+- 50_資料/01_notes/YYYY 配下にファイルを配置（YYYYは年）
 	- ノートを新規作成した年のディレクトリ配下にファイルが配置される
 	- 年ごとのディレクトリ分割により、1ディレクトリあたりのファイル数を抑制
-		- 大量のファイルによるパフォーマンス低下やファイルシステムの制限を回避
 		- 長期的な運用でも安定したファイル管理が可能
 
 **アセットの管理**
-- アセットを使用するのは基本的に #note のみ
-- 03_assets/YYYY 配下にアセットのグループごとにディレクトリを作成（YYYYは年）
+- 50_資料/z_素材/assets/YYYY 配下にアセットのグループごとにディレクトリを作成（YYYYは年）
 	- 年ディレクトリは手動で作成
-	- 関連する #note と同じ年になるように
 - 図の作成：
 	- VSCodeでdrawio拡張機能を使用
 	- ソースファイルは *.drawio 形式で保存
 	- 作成した図は *.png や *.svg などの形式で保存（drawio拡張機能で作成）
-- ディレクトリ構成例：
-	- 03_assets/2024/sample/
-		- アセットグループディレクトリ
-	- 03_assets/2024/sample/sample.drawio
-		- drawioファイル
-	- 03_assets/2024/sample/sample.png
-		- drawioから出力した画像ファイル
 
 **リンクの管理**
 - リンクの作成方法：
@@ -171,226 +179,6 @@
 - 「今日学んだこと：プログラミングの新概念X」→ #diary に簡潔に記述し、詳細は #note にリンクを張って記載
 
 ## Obsidian 設定
-
-[ここからはじめる - Obsidian 日本語ヘルプ - Obsidian Publish](https://publish.obsidian.md/help-ja/%E3%81%93%E3%81%93%E3%81%8B%E3%82%89%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B)
-デフォルト設定から変更している部分を記載します。
-
-### ファイルとリンク
-
-- 内部リンクを毎回更新する
-	- ON
-- 新規ノートの作成場所
-	- 以下で指定されたフォルダ
-- 新規ノートを作成するフォルダ
-	- 02_notes
-- 新規添付ファイルの作成場所
-	- 以下で指定されたフォルダ
-- 添付ファイルフォルダのパス
-	- 03_assets
-
-### 外観
-
-テーマ
-- [Minimal](https://github.com/kepano/obsidian-minimal)
-#### フォント
-
-ここでは [M+ FONTS](https://mplusfonts.github.io) を設定しています。
-第２フォントとして 源ノ角ゴシック（Source Han Code JP） にしています。
-
-- インターフェースフォント
-	- M PLUS 1 Code
-- テキストフォント
-	- M PLUS 1 Code
-- モノスペースフォント
-	- M PLUS 1 Code
-
-#### Interface
-
-タブタイトルバーでファイル名が編集できるけれど、ファイル内でも編集できるので不要だと判断しました。
-ヘッダーのメニューは使いません。機能はコマンドパレットから使います。
-
-- タブタイトルバーを表示
-	- OFF
-
-## [コアプラグイン](https://publish.obsidian.md/help-ja/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3/%E3%82%B3%E3%82%A2%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3) 設定
-
-使用するコアプラグインを選択します。
-
-ON のコアプラグインは以下
-
-- アウトゴーイングリンク
-- アウトライン
-- クイックスイッチャー
-- グラフビュー
-- コマンドパレット
-- デイリーノート
-- ファイルエクスプローラ
-- ページビュー
-- ワークスペース
-- 検索
-- キャンバス
-- バックリンク
-
-### [デイリーノート](https://publish.obsidian.md/help-ja/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3/%E3%83%87%E3%82%A4%E3%83%AA%E3%83%BC%E3%83%8E%E3%83%BC%E3%83%88)
-
-`01_diary/YYYY/YYYY-MM-DD.md` のディレクトリ構造となります。
-年ディレクトリ配下に、一年で最大で365~366ファイルが生成されるだけなので、月ごとにフォルダ分けするのは不要と判断しました。
-
-- 日付の書式
-	- YYYY/YYYY-MM-DD
-- 新規ファイルの場所
-	- 01_diary
-- テンプレートファイルの場所
-	- 00_template/[[01_diary]]
-- 起動時にデイリーノートを開く
-	- ON
-
-### [キャンバス](https://help.obsidian.md/Plugins/Canvas)
-
-- 新規キャンバスファイルのデフォルトロケーション
-	- 以下で指定されたフォルダ
-- 新規キャンバスファイルが作成されるフォルダ
-	- 04_canvas
-
-## コミュニティプラグイン 設定
-
-### [Auto Link Title](https://github.com/zolrath/obsidian-auto-link-title)
-
-URLを貼ったら、自動的にウェブページを取得してリンクタイトルを抽出し、正しいタイトルが設定されたマークダウンリンクを作成するプラグイン
-
-設定の変更なし
-
-### [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
-
-シンプルなカレンダーを表示するプラグイン
-
-設定の変更なし
-
-### [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
-
-Obsidian Vaultをクエリ可能なデータベースとして扱うプラグイン
-
-日記 #diary とノート #note を一覧表示するために使用します。
-05_dataview配下に使いそうな一覧表示を用意しています。
-自分自身の用途に合わせてカスタムしてください。
-
-- [[00_all_by_filename_asc]]
-	- 日記とノートの全ファイルをファイル名昇順で表示
-- [[00_all_by_updated_desc]]
-	- 日記とノートの全ファイルを最終更新日降順で表示
-- [[01_diary_by_filename_asc]]
-	- 日記の全ファイルをファイル名昇順で表示
-- [[01_diary_by_updated_desc]]
-	- 日記の全ファイルを最終更新日降順で表示
-- [[02_notes_by_filename_asc]]
-	- ノートの全ファイルをファイル名昇順で表示
-- [[02_notes_by_updated_desc]]
-	- ノートの全ファイルを最終更新日降順で表示
-
-### [Hider](https://github.com/kepano/obsidian-hider)
-
-Obsidian UI の特定の部分を隠すことができるプラグイン
-
-デフォルトから変更した設定：
-- Hide properties in Reading view → ON
-	- リーディングビューでプロパティを隠す
-- その他
-	- 自身の好みで設定してください
-
-### [Outliner](https://github.com/vslinko/obsidian-outliner)
-
-WorkflowyやRoamResearchのようなリストの操作感にするためのプラグイン
-
-個人的に、VSCodeと同じような操作感にするために入れています。
-- Alt + ↑ でリストを上に移動
-- Alt + ↓ でリストを下に移動
-
-Outliner 設定：
-- Stick the cursor to the content → Stick cursor out of bullets and checkboxes
-	- カーソルをコンテンツに固定 → カーソルを箇条書きやチェックボックスの外に固定
-- Enhance the Tab key → OFF
-	- Tabキーの機能拡張
-- Enhance the Enter key → OFF
-	- Enterキーの機能拡張
-- Enhance the Ctrl+A or Cmd+A behavior → ON
-	- Ctrl+AまたはCmd+Aの動作拡張
-- Improve the style of your lists → OFF
-	- リストのスタイル改善
-- Draw vertical indentation lines → OFF
-	- 垂直インデントラインの描画
-- Vertical indentation line click action → Toggle Folding
-	- 垂直インデントラインクリック時の動作 → 折りたたみの切り替え
-- Drag-and-Drop → ON
-	- ドラッグアンドドロップ
-- Debug mode → ON
-	- デバッグモード
-
-Hotkey 設定：
-- Outliner：Move list and sublists down → Alt + ↓
-	- アウトライナー：リストとサブリストを下に移動
-- Outliner：Move list and sublists up → Alt + ↑
-	- アウトライナー：リストとサブリストを上に移動
-
-### [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings)
-
-Minimal Theme 付属のプラグイン
-Obsidianの設定パネルからテーマをカスタマイズすることができます。
-
-デフォルトから変更した設定：
-- フォントサイズの設定はご自由に
-
-Features：
-- Underline internal links → OFF
-	- 内部リンクに下線を引く
-- Maximize media → OFF
-	- 画像と動画を行幅分埋める
-
-Typography：
-
-- Text font size → 16
-	- テキストのフォントサイズ
-- Small font size → 13
-	- 小さいフォントサイズ
-- Line height → 2
-	- 行の高さ
-- Normal line witdh → 40
-	- 通常の行の幅
-
-### [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
-
-スニペット、テーマ、プラグインのCSSファイルで設定オプションのセットを定義することができるプラグイン
-
-デフォルトから変更した設定：
-- フォントサイズの設定はご自由に
-
-Minimal → Headings → Level 1 Headings：
-- H1 font size → 2em
-	- H1のフォントサイズ
-
-Minimal → Headings → Level 2 Headings：
-- H2 font size → 1.6em
-	- H2のフォントサイズ
-- H2 divider line → ON
-	- H2の区切り線
-
-Minimal → Headings → Level 3 Headings：
-- H3 font size → 1.4em
-	- H3のフォントサイズ
-- H3 divider line → ON
-	- H3の区切り線
-
-Minimal → Headings → Level 4 Headings：
-- H4 font size → 1.2em
-	- H4のフォントサイズ
-- H4 divider line → ON
-	- H4の区切り線
-
-Minimal → Properties：
-- Hide properties heading → ON
-	- プロパティの見出しを隠す
-- Hide "Add property" button → ON
-	- "プロパティの追加"ボタンを隠す
-
-Minimal → Sidebars：
-- Hide help button → ON
-	- ヘルプボタンを隠す
+- 適当。頻繁に変えてるからわからん。
+- けっきょく最後は配色とかテーマにいくんじゃない？
+- 機能とかほとんど変わらんしそうなったらもう色よ色w

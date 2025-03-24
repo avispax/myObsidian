@@ -1,10 +1,10 @@
 {
   "alwaysUpdateLinks": true,
   "newFileLocation": "folder",
-  "newFileFolderPath": "50_資料/01_notes",
+  "newFileFolderPath": "50_資料/01_notes/2025",
   "attachmentFolderPath": "50_資料/z_素材/assets",
   "showInlineTitle": true,
   "useMarkdownLinks": false,
   "showUnsupportedFiles": true,
-  "showLineNumber": true
+  "showLineNumber": false
 }

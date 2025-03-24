@@ -3,6 +3,9 @@ tags:
   - project
 ---
 
+```dataviewjs
+dv.view('project-progress')
+```
 
 ## 概要
 とりあえず受験する。試験はたぶん10月。申込みは7月ぐらい。

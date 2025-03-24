@@ -17,6 +17,10 @@
     {
       "folder": "50_資料/01_notes",
       "template": "Utility/Templates/02_note.md"
+    },
+    {
+      "folder": "80_people",
+      "template": "Utility/Templates/New note templates/Person.md"
     }
   ],
   "enable_file_templates": false,
